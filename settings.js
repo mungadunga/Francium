@@ -1,7 +1,7 @@
 // login
 let start = () => {
    let a = document.createElement("a");
-   a.setAttribute("href", "./don't touch/folder 1/main.html");
+   a.setAttribute("href", "./fr/main.html");
    a.classList.add("myA");
    let button = document.createElement("button");
    let node = document.createTextNode("Click here to start!");
