@@ -40,7 +40,7 @@ let createAnnouncement = (title, content, color) => {
 // create grade <=
 
 // create announcement =>
-createAnnouncement("Exam 23-03-21!", "Don't forget to practice!", "#d11e1e");
+createAnnouncement("Exam 24-03-21!", "Don't forget to practice!", "#d11e1e");
 createAnnouncement("Introducing Announcements!", "You'll see important information about Francium and your courses here!", "#336fe8");
 // create announcement <=
 

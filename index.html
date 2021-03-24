@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       <title>Grades</title>
-      <!--D3-->
       <script src="https://d3js.org/d3.v6.min.js"></script>
-      <style>
-         .add {
-            transform: scale(1.1);
-            display: flex;
-            justify-content: center;
-            position: relative;
-         }
-         h1 {
-            text-align: center;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-         }
-         .myA {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            text-decoration: none;
-         }
-      </style>
+      <link rel="stylesheet" href="style.css">
    </head>
    <body>
-      <h1>Francium</h1>
-      <div class=add>
-         <input type="text" placeholder="username..." class="input diss">
-         <button class="login diss">Login</button>
-      </div>
-      <script src="settings.js"></script>
+      <section class=file>
+         <div class=main>
+            <h1 style="text-align: center;">Lara's grade report</h1>
+            <div class=thing></div>
+         </div>
+         <h1>Announcements</h1>
+         <div id=annbar></div>
+      </section>
+      <script src="script.js"></script>
    </body>
 </html>
