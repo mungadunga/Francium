@@ -1,7 +1,15 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.sub {
+   margin: 30px;
+   text-align: center;
+}
+.thing{
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+}
 .file {
    display: flex;
    flex-direction: column;
@@ -23,5 +31,21 @@ body {
 }
 .desc{
    padding: 10px;
-   color: #5a5656;
+   color: #302e2e;
+   text-align: center;
+}
+.noAnnouncementClass {
+   display: flex;
+   justify-content: center;
+   background-color: #52596b;
+   padding: 17px 30px;
+   border-radius: 7px;
+   margin: 10px;
+   color: white;
+   font-family: 'Multi', sans-serif;
+   font-weight: 200;
+}
+
+@media(max-width: 525px){
+   .thing{font-size: 4vw}
 }

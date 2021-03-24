@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
       <title>Grades</title>
-      <script src="https://d3js.org/d3.v6.min.js"></script>
+      <!-- responsive design -->
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <!-- styles -->
       <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+      <!-- D3 -->
+      <script src="https://d3js.org/d3.v6.min.js"></script>
    </head>
    <body>
       <section class=file>
-         <div class=main>
-            <h1 style="text-align: center;">Lara's grade report</h1>
+         <div class="main">
+            <h1 style="text-align: center;" class=sub>Lara's grade report</h1>
             <div class=thing></div>
          </div>
-         <h1>Announcements</h1>
-         <div id=annbar></div>
+         <div class="sub">
+            <h1>Announcements</h1>
+            <div id=annbar></div>
+         </div>
       </section>
       <script src="script.js"></script>
    </body>
