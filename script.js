@@ -47,11 +47,11 @@ let createAnnouncement = (title, content, color) => {
    createGrade("16.03", 8, "Compréhension", 1);
 // create grade <=
 
+
 // create announcement =>
 
-
-
 // create announcement <=
+
 if(!document.querySelector("#annbar").hasChildNodes()) {
    let box = document.createElement("div");
    let text = document.createTextNode("No recent announcements!");
@@ -75,7 +75,7 @@ createDiv(description, "description");
 let newData = dataset[0].coef;
 let roundToHundredth = value => Number(value.toFixed(2));
 average.selectAll("div")
-.data(["Average:", `${roundToHundredth(newData.reduce((a, c) => a + c) / newData.length)} / 10`])
+.data(["Average:", `${(roundToHundredth(newData.reduce((a, c) => a + c) / newData.length)) * 2} / 20`])
 .enter()
 .append("div")
 .style("margin", "3px")
