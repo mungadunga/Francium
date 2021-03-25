@@ -42,16 +42,17 @@ let createAnnouncement = (title, content, color) => {
 // create grade =>
    createGrade("Date", "Grade:", "Description:");
    // add grades here
+   createGrade("25.03", 8.8, "Travail de Classe", 1);
    createGrade("24.03", 5.75, "Conjugaison", 1);
    createGrade("24.03", 9, "Production Ecrite", 2);
    createGrade("16.03", 8, "Compréhension", 1);
 // create grade <=
 
+
 // create announcement =>
-
-
-
+createAnnouncement("Good News!", "No more tests until next week ( end of dossier )", "#0d8313");
 // create announcement <=
+
 if(!document.querySelector("#annbar").hasChildNodes()) {
    let box = document.createElement("div");
    let text = document.createTextNode("No recent announcements!");
@@ -67,7 +68,8 @@ const grades = div.append("div").style("border", "2px solid black").style("borde
 const description = div.append("div").style("border", "2px solid black").style("border-right", "none").style("border-bottom", "none");
 const average = div.append("div").style("border", "2px solid black");
 // create divs
-const createDiv = (selector, insideData, extra) => selector.selectAll("div").data(dataset[0][insideData]).enter().append("div").style("border-bottom", "2px solid black").style("padding", "3px").text(d => extra ? Number.isInteger(d * 100) ? d + " / 10": d : d);
+const createDiv = (selector, insideData, extra) => selector.selectAll("div").data(dataset[0][insideData]).enter().append("div").style("border-bottom", "2px solid black").style("padding", "3px").text(d => extra && typeof d === "number" ? `${d} / 10`: d);
+
 createDiv(date, "date");
 createDiv(grades, "grades", "d");
 createDiv(description, "description");
