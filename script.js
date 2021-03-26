@@ -42,15 +42,16 @@ let createAnnouncement = (title, content, color) => {
 // create grade =>
    createGrade("Date", "Grade:", "Description:");
    // add grades here
-   createGrade("25.03", 8.8, "Travail de Classe", 1);
-   createGrade("24.03", 5.75, "Conjugaison", 1);
-   createGrade("24.03", 9, "Production Ecrite", 2);
-   createGrade("16.03", 8, "Compréhension", 1);
+   createGrade("26.03", 9, "Dossier 3 Leçon 1", 1);
+   createGrade("25.03", 8.8, "Dossier 2 Leçon 3", 1);
+   createGrade("24.03", 5.75, "Conjugaison", 2);
+   createGrade("24.03", 9, "Production Ecrite", 3);
+   createGrade("16.03", 8, "Compréhension", 2);
 // create grade <=
 
 
 // create announcement =>
-createAnnouncement("Good News!", "No more tests until next week ( end of dossier )", "#0d8313");
+
 // create announcement <=
 
 if(!document.querySelector("#annbar").hasChildNodes()) {
