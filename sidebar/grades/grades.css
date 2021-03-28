@@ -1,0 +1,128 @@
+body {
+    /*   font-family: 'Multi', sans-serif; */
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sub {
+    margin: 30px;
+    text-align: center;
+}
+.thing{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.announcement {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+}
+.title {
+    padding: 4px;
+    margin: 0;
+    background-color: #2185d0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+.desc{
+    padding: 10px;
+    color: #302e2e;
+    text-align: center;
+}
+.noAnnouncementClass {
+    display: flex;
+    justify-content: center;
+    background-color: #52596b;
+    padding: 17px 30px;
+    border-radius: 7px;
+    margin: 10px;
+    color: white;
+    font-family: 'Multi', sans-serif;
+    font-weight: 200;
+}
+header {
+    width: 100vw;
+    height: 10vh;
+    background-color: #52596b;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header-title {
+    margin: 0;
+    margin-left: 20px;
+    font-family: 'Multi', sans-serif;
+    font-weight: 400;
+    margin-right: auto;
+}
+
+/*sidebar*/
+
+.s-b{width: 30px;}
+.sidebar-button div{
+    height: 4px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    align-content: center;
+}
+.sidebar-button {margin: 10px;}
+.sidebar-button:hover {cursor: pointer;}
+
+.header-sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    text-align: start;
+}.header-sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}.header-sidenav a:hover {
+    color: #f1f1f1;
+}.header-sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 525px){
+    .thing{font-size: 4vw}
+}
+@media(max-height: 400px){
+    .navbar {
+    height: 20vh;
+    }
+}

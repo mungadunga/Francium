@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Grades</title>
+      <title>Home</title>
       <!-- responsive design -->
+      <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <!-- styles -->
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
-      <!-- D3 -->
+      <!-- D3.js -->
       <script src="https://d3js.org/d3.v6.min.js"></script>
    </head>
    <body>
-      <section class=file>
-         <div class="main">
-            <h1 style="text-align: center;" class=sub>Lara's grade report</h1>
-            <div class=thing></div>
+      <header>
+         <div class=sidebar-button>
+            <div id=s-01 class=s-b></div>
+            <div id=s-02 class=s-b></div>
+            <div id=s-03 class=s-b></div>
          </div>
+         <p class=header-title>Francium</p>
+      </header>
+      <section>
+         <div id=header-sidenav class=header-sidenav>
+            <a href="javascript:void(0)" class="x-button">&times;</a>
+            <a href="/sidebar/grades/grades.html">Grades</a>
+         </div>
+      </section>
+      <section class=file>
          <div class="sub">
             <h1>Announcements</h1>
             <div id=annbar></div>
