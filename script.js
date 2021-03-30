@@ -1,13 +1,3 @@
-// dataset
-const dataset = [{
-   "date": [],
-   "grades": [],
-   "description": [],
-   "coef": []
-}];
-
-// setup
-
 let createAnnouncement = (title, content, color) => {
    let divi = document.createElement("div");
    divi.classList.add("announcement");
@@ -33,10 +23,6 @@ let createAnnouncement = (title, content, color) => {
 createAnnouncement("New update to Francium!", "Do you like it?", "#20de1d");
 // create announcement <=
 
-
-
-
-
 if(!document.querySelector("#annbar").hasChildNodes()) {
    let box = document.createElement("div");
    let text = document.createTextNode("No recent announcements!");
@@ -46,7 +32,6 @@ if(!document.querySelector("#annbar").hasChildNodes()) {
 };
 
 // sidebar
-
 document.querySelector(".sidebar-button").addEventListener("click", e => {
    let s = document.querySelector("#header-sidenav").style;
    s.width = "250px";

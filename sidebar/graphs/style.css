@@ -3,50 +3,6 @@ body {
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.sub {
-    margin: 30px;
-    text-align: center;
-}
-.thing{
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-}
-.file {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.announcement {
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 10px;
-}
-.title {
-    padding: 4px;
-    margin: 0;
-    background-color: #2185d0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
-}
-.desc{
-    padding: 10px;
-    color: #302e2e;
-    text-align: center;
-}
-.noAnnouncementClass {
-    display: flex;
-    justify-content: center;
-    background-color: #52596b;
-    padding: 17px 30px;
-    border-radius: 7px;
-    margin: 10px;
-    color: white;
-    font-family: 'Multi', sans-serif;
-    font-weight: 200;
-}
 header {
     width: 100vw;
     height: 10vh;
@@ -80,7 +36,6 @@ header {
 }
 .sidebar-button {margin: 10px;}
 .sidebar-button:hover {cursor: pointer;}
-
 .header-sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -109,14 +64,7 @@ header {
     margin-left: 50px;
 }
 
-
-
-
-@media(max-width: 525px){
-    .thing{font-size: 4vw}
-}
-@media(max-height: 400px){
-    .navbar {
-    height: 20vh;
-    }
+.main {
+    display: flex;
+    justify-content: center;
 }

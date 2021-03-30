@@ -3,50 +3,6 @@ body {
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.sub {
-    margin: 30px;
-    text-align: center;
-}
-.thing{
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-}
-.file {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.announcement {
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 10px;
-}
-.title {
-    padding: 4px;
-    margin: 0;
-    background-color: #2185d0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
-}
-.desc{
-    padding: 10px;
-    color: #302e2e;
-    text-align: center;
-}
-.noAnnouncementClass {
-    display: flex;
-    justify-content: center;
-    background-color: #52596b;
-    padding: 17px 30px;
-    border-radius: 7px;
-    margin: 10px;
-    color: white;
-    font-family: 'Multi', sans-serif;
-    font-weight: 200;
-}
 header {
     width: 100vw;
     height: 10vh;
@@ -80,7 +36,6 @@ header {
 }
 .sidebar-button {margin: 10px;}
 .sidebar-button:hover {cursor: pointer;}
-
 .header-sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -112,11 +67,83 @@ header {
 
 
 
-@media(max-width: 525px){
-    .thing{font-size: 4vw}
-}
-@media(max-height: 400px){
-    .navbar {
-    height: 20vh;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <!-- responsive design -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- styles -->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+        <!-- D3.js -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class=sidebar-button>
+                <div id=s-01 class=s-b></div>
+                <div id=s-02 class=s-b></div>
+                <div id=s-03 class=s-b></div>
+            </div>
+            <p class=header-title>Francium</p>
+        </header>
+        <section>
+            <div id=header-sidenav class=header-sidenav>
+                <a href="javascript:void(0)" class="x-button">&times;</a>
+                <a href="../../index.html">Home</a>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// sidebar
+
+document.querySelector(".sidebar-button").addEventListener("click", e => {
+    let s = document.querySelector("#header-sidenav").style;
+    s.width = "250px";
+    s.borderRight = "5px solid #7289da";
+});
+
+document.querySelector(".x-button").addEventListener("click", e => {
+    let s = document.querySelector("#header-sidenav").style;
+    s.width = "0px";
+    s.borderRight = "0px solid #7289da";
+});
