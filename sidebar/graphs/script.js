@@ -50,7 +50,7 @@ fetch("../../dataset.json")
   .attr("height", d => y(0) - y(d.score))
   .attr("width", x.bandwidth())
   .append("title")
-  .text(d => d.score)
+  .text(d => `${d.score} / 10`)
   
   const yAxis = g => {
     g.attr("transform", `translate(${margin.left}, 0)`)
@@ -100,7 +100,7 @@ fetch("../../dataset.json")
   .attr("height", d => y(0) - y(d))
   .attr("width", x2.bandwidth())
   .append("title")
-  .text((d, i) => `${d} / 10, ${dataset[0].description[i + 1]}`)
+  .text((d, i) => `Grade: ${d} / 10, Description: ${dataset[0].description[i + 1]}`)
   
   
   const xAxis2 = g => {
