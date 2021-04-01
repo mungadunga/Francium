@@ -1,7 +1,7 @@
 [{
    "date": ["Date:", "27.03", "26.03", "25.03", "24.03", "24.03", "16.03"],
    "grades": ["Grade:", 8.5, 9, 8.8, 5.75, 9, 8],
-   "description": ["Description:", "D3 Leçon 2", "D3 Leçon 1", "D2 Leçon 3", "Conjugaison", "Production Ecrite", "Compréhension"],
+   "description": ["Description:", "D3 Leçon 2", "D3 Leçon 1", "D2 Leçon 3", "Conj. D2 Leçon 2", "Prod. D2 Leçon 2", "Comp. D1 Leçon 3"],
    "coef": [1, 1, 1, 2, 3, 2],
    "graph1": [
       {"name": "Conjugaison", "score": [5.75]},

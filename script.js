@@ -20,7 +20,7 @@ let createAnnouncement = (title, content, color) => {
 
 
 // create announcement =>
-createAnnouncement("New update to Francium!", "Do you like it?", "#20de1d");
+
 // create announcement <=
 
 if(!document.querySelector("#annbar").hasChildNodes()) {
