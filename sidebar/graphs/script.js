@@ -100,7 +100,7 @@ fetch("../../dataset.json")
   .attr("height", d => y(0) - y(d))
   .attr("width", x2.bandwidth())
   .append("title")
-  .text((d, i) => `${d}, ${dataset[0].description[i + 1]}`)
+  .text((d, i) => `${d} / 10, ${dataset[0].description[i + 1]}`)
   
   
   const xAxis2 = g => {
