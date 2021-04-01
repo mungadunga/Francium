@@ -2,5 +2,11 @@
    "date": ["Date:", "27.03", "26.03", "25.03", "24.03", "24.03", "16.03"],
    "grades": ["Grade:", 8.5, 9, 8.8, 5.75, 9, 8],
    "description": ["Description:", "D3 Leçon 2", "D3 Leçon 1", "D2 Leçon 3", "Conjugaison", "Production Ecrite", "Compréhension"],
-   "coef": [1, 1, 1, 2, 3, 2]
+   "coef": [1, 1, 1, 2, 3, 2],
+   "graph1": [
+      {"name": "Conjugaison", "score": [5.75]},
+      {"name": "Compréhension", "score": [8]},
+      {"name": "Production écrite", "score": [9]},
+      {"name": "Travail de classe", "score": [8.5, 9, 8.8]}
+   ]
 }]

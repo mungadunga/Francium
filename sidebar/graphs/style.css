@@ -1,7 +1,9 @@
+html {overflow: hidden;}
 body {
     /*   font-family: 'Multi', sans-serif; */
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
 }
 header {
     width: 100vw;
@@ -67,4 +69,21 @@ header {
 .main {
     display: flex;
     justify-content: center;
+}
+.bar-graph1:hover {fill: brown;}
+
+@media(max-width: 700px){
+    .graph1 {
+        transform: scale(0.75)
+    }
+}
+@media(max-width: 550px){
+    .graph1 {
+        transform: scale(0.625)
+    }
+}
+@media(max-width: 400px){
+    .graph1 {
+        transform: scale(0.5)
+    }
 }
