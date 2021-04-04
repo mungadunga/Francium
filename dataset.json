@@ -1,10 +1,11 @@
 [{
-   "date": ["Date:", "01-04", "27.03", "26.03", "25.03", "24.03", "24.03", "16.03"],
-   "grades": ["Grade:", 8.8, 8.5, 9, 8.8, 5.75, 9, 8],
-   "description": ["Description:", "3.3 Gram.", "3.2", "3.1", "2.3", "2.2 Gram.", "2.2 Prod.", "1.3 Comp."],
-   "coef": [1, 1, 1, 1, 2, 3, 2],
+   "category": ["Grammaire", "Grammaire", "Travail de classe", "Travail de classe", "Travail de classe", "Grammaire", "Production écrite", "Compréhension"],
+   "date": ["02-04", "01-04", "27.03", "26.03", "25.03", "24.03", "24.03", "16.03"],
+   "grades": [9.09, 8.8, 8.5, 9, 8.8, 5.75, 9, 8],
+   "description": ["Dossier 3 leçon 3, grammaire", "Dossier 3 leçon 3, grammaire", "Dossier 3 leçon 2, travail de classe", "Dossier 2 leçon 3, travail de classe", "Dossier 2 leçon 2, travail de classe", "Dossier 2 leçon 2, grammaire", "Dossier 2 leçon 2, écriture de lettre", "Dossier 1 leçon 3, Test de fin de dossier"],
+   "coef": [1, 1, 1, 1, 1, 2, 3, 2],
    "graph1": [
-      {"name": "Grammaire", "score": [8.8, 5.75]},
+      {"name": "Grammaire", "score": [9.09, 8.8, 5.75]},
       {"name": "Compréhension", "score": [8]},
       {"name": "Production écrite", "score": [9]},
       {"name": "Travail de classe", "score": [8.5, 9, 8.8]}

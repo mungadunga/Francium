@@ -1,11 +1,12 @@
 body {
     /*   font-family: 'Multi', sans-serif; */
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Multi', sans-serif;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 .sub {
-    margin: 30px;
-    text-align: center;
+    margin: 30px 0 30px 0;
 }
 .thing{
     font-size: 20px;
@@ -108,17 +109,91 @@ header {
     font-size: 36px;
     margin-left: 50px;
 }
-.legend {
-text-align: \;
+
+.main{
+    display:flex;
+    flex-direction: column;
+}
+.grade:hover, .grade:active{
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+}
+.grade {
+    border: 2px solid black;
+    border-top: none;
+    padding: 20px;
+    font-family: 'Multi', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    user-select: none;
+    width: 200px
+}
+.grade:first-child{
+    border-top: 2px solid black;
+}
+.grade-date {
+    font-family: 'Multi', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    color: gray;
+}
+.test{
+    background-color: #111;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-weight: 100;
+}
+.close-modal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
+.close-modal:hover, .close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content-grade, .modal-content-coef {
+    font-weight: 700;
+}
+hr{background-color: black;}
 
+.average{
+    margin: 0 0 20px 0;
+    font-size: 25px;;
+    padding: 0px 10px 5px 10px;
+    font-weight: 500;
+    text-align: center;
+    border: 2px solid black;
+}
+.average-title {border-top: 10px solid white;}
+.average-num {
+    font-weight: 700;
+    padding: 8px;
+}
 
 @media(max-width: 525px){
     .thing{font-size: 4vw}
 }
 @media(max-height: 400px){
-    .navbar {
-    height: 20vh;
-    }
+    .navbar {height: 20vh;}
 }

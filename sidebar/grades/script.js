@@ -1,34 +1,64 @@
 fetch("../../dataset.json")
 .then(response => response.json())
 .then(dataset => {
-    // div setup
-    const div = d3.select(".thing").append("div").style("display", "flex");
-    const date = div.append("div").style("border", "2px solid black").style("border-right", "none").style("border-bottom", "none");
-    const grades = div.append("div").style("border", "2px solid black").style("border-right", "none").style("border-bottom", "none");
-    const description = div.append("div").style("border", "2px solid black").style("border-right", "none").style("border-bottom", "none");
-    const average = div.append("div").style("border", "2px solid black");
 
-    // create divs
-    const createDiv = (selector, insideData, extra) => selector.selectAll("div").data(dataset[0][insideData]).enter().append("div").style("border-bottom", "2px solid black").style("padding", "3px").text(d => extra && typeof d === "number" ? `${d} / 10`: d);
-    createDiv(date, "date");
-    createDiv(grades, "grades", "d");
-    createDiv(description, "description");
+    // grade list
+    const main = d3.select(".main");
+    const grades = dataset[0].grades;
+    const category = dataset[0].category;
+    const date = dataset[0].date;
 
-    // average setup
-    let roundToHundredth = value => Number(value.toFixed(2));
-    dataset[0].grades.shift();
-    let gradeArr = dataset[0].grades;
-    let coefArr = dataset[0].coef;
-    let newArr = [];
-
-    // average calculator
-    gradeArr.map((x, i) => Array.from({length: coefArr[i]}, () => newArr.push(x)));
-    average.selectAll("div")
-    .data(["Average:", `${roundToHundredth(newArr.reduce((a, c) => a + c) / newArr.length)} / 10`])
+    main.append("div")
+    .selectAll("div")
+    .data(grades)
     .enter()
+    // category title
     .append("div")
-    .style("margin", "3px")
-    .text(d => d)
+    .text((_, i) => category[i])
+    .attr("class", "grade")
+    // date
+    .append("div")
+    .text((_, i) => `le ${date[i]}`)
+    .attr("class", "grade-date")
+
+    // border color
+    document.querySelectorAll(".grade").forEach((elem, i) => {
+        let obj = {
+            "Grammaire": "5px solid red",
+            "Travail de classe": "5px solid blue",
+            "Production écrite": "5px solid green",
+            "Compréhension": "5px solid #fcba03",
+        }
+        elem.style.borderLeft = obj[category[i]];
+    });
+
+    // modal
+    let modal = document.querySelector('#myModal');
+    let gradeBtn = document.querySelectorAll(".grade");
+    let span = document.querySelector(".close-modal");
+
+    gradeBtn.forEach((elem, i) => elem.addEventListener('click', _ => {
+        modal.style.display = "block";
+        document.querySelector('.modal-content-header').innerHTML = `${dataset[0].category[i]} - Note du ${dataset[0].date[i]}`;
+        document.querySelector('.modal-content-description').innerHTML = dataset[0].description[i];
+        document.querySelector('.modal-content-grade').innerHTML = `${dataset[0].grades[i]} / 10`;
+        document.querySelector('.modal-content-coef').innerHTML = dataset[0].coef[i];
+    }));
+    span.addEventListener('click', _ => modal.style.display = "none");
+    window.addEventListener('click', e => e.target == modal ? modal.style.display = "none" : 'error');
+
+    // average
+    let roundToHundredth = value => Number(value.toFixed(2));
+    let average = [];
+
+    dataset[0].grades.map((x, i) => Array.from({length: dataset[0].coef[i]}, () => average.push(x)));
+    average = roundToHundredth(average.reduce((a, c) => a + c) / average.length);
+    document.querySelector(".average-num").innerHTML = `${average} / 10`;
+
+    // extra styles
+    let g = average * 255 / 10;
+    let r = 255 - g;
+    document.querySelector(".average-title").style.borderTop = `10px solid rgb(${r}, ${g}, 0)`
 });
 
 // open sidebar

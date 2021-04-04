@@ -2,7 +2,6 @@ fetch("../../dataset.json")
 .then(response => response.json())
 .then(dataset => {
   // setup
-  dataset[0].grades.shift();
   let roundToHundredth = value => Number(value.toFixed(2));
 
   // average calculator
@@ -100,7 +99,7 @@ fetch("../../dataset.json")
   .attr("height", d => y(0) - y(d))
   .attr("width", x2.bandwidth())
   .append("title")
-  .text((d, i) => `Grade: ${d} / 10, Description: ${dataset[0].description[i + 1]}`)
+  .text((d, i) => `Grade: ${d} / 10, Description: ${dataset[0].description[i]}`)
   
   
   const xAxis2 = g => {

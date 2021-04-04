@@ -12,6 +12,7 @@
         <script src="https://d3js.org/d3.v6.min.js"></script>
     </head>
     <body>
+
         <header>
             <div class=sidebar-button>
                 <div id=s-01 class=s-b></div>
@@ -20,6 +21,7 @@
             </div>
             <p class=header-title>Francium</p>
         </header>
+
         <section>
             <div id=header-sidenav class=header-sidenav>
                 <a href="javascript:void(0)" class="x-button">&times;</a>
@@ -27,13 +29,31 @@
                 <a href="../graphs/index.html">Graphs</a>
             </div>
         </section>
+
         <section class=file>
+            <h1 class=sub>Lara's grade report</h1>
+            <div class=average>
+                <div class=average-title></div>
+                <div class=average-num></div>
+            </div>
             <div class="main">
-                <h1 style="text-align: center;" class=sub>Lara's grade report</h1>
-                <div class=thing></div>
-                <p class=legend><span style="border-bottom: 2px solid black;">Legend:</span> <br><br>Comp. = Compréhension <br> Prod. = Production écrite <br>Gram. = Grammaire <br> 2.3 = Dossier 2 Leçon 3</p>
+                
             </div>
         </section>
+
+        <section id=myModal class=modal>
+            <div class=modal-content>
+                <span class=close-modal>&times;</span>
+
+                <p class=modal-content-header>header</p>
+                <hr>
+                <em style="font-weight: 100;"><p class=modal-content-description></p></em>
+
+                <p>Note: <span class=modal-content-grade></span></p>
+                <p>Coefficient: <span class=modal-content-coef></span></p>
+            </div>
+        </section>
+
         <script src="script.js"></script>
     </body>
 </html>
