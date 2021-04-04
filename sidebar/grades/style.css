@@ -184,8 +184,13 @@ hr{background-color: black;}
     font-weight: 500;
     text-align: center;
     border: 2px solid black;
+    user-select: none;
 }
-.average-title {border-top: 10px solid white;}
+.average-title {
+    border-top: 10px solid white;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
 .average-num {
     font-weight: 700;
     padding: 8px;

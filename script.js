@@ -1,14 +1,19 @@
-let createAnnouncement = (title, content, color) => {
+let createAnnouncement = (title, content, backColor, fontColor) => {
    let divi = document.createElement("div");
    divi.classList.add("announcement");
+
    let one = document.createElement("p");
    one.classList.add("title");
-   let oneContent = document.createTextNode(title);
-   one.style.backgroundColor = color;
+   one.style.backgroundColor = backColor;
    one.style.padding = "5px 20px 5px 20px";
+   one.style.color = fontColor;
+   
    let two = document.createElement("p");
    two.classList.add("desc")
+
    let twoContent = document.createTextNode(content);
+   let oneContent = document.createTextNode(title);
+
    one.appendChild(oneContent);
    two.appendChild(twoContent);
    divi.appendChild(one);
@@ -20,7 +25,7 @@ let createAnnouncement = (title, content, color) => {
 
 
 // create announcement =>
-
+createAnnouncement("New redesign to grades section!", "Seeing your grades is now easier than ever!", "rgb(220, 255, 94)", "black");
 // create announcement <=
 
 if(!document.querySelector("#annbar").hasChildNodes()) {
