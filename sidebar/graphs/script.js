@@ -12,7 +12,6 @@ fetch("../../dataset.json")
 
 
   // graph 1
-  
   dataset[0].graph1.map(x => x.score = roundToHundredth(x.score.reduce((a, c) => a + c) / x.score.length));
 
   const data = dataset[0].graph1;
