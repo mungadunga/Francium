@@ -21,11 +21,8 @@ let createAnnouncement = (title, content, backColor, fontColor) => {
    document.getElementById("annbar").appendChild(divi);
 };
 
-
-
-
 // create announcement =>
-createAnnouncement("New redesign to grades section!", "Seeing your grades is now easier than ever!", "rgb(220, 255, 94)", "black");
+createAnnouncement("Bonjour!", "Comment allez-vous?", "rgb(220, 255, 94)", "black");
 // create announcement <=
 
 if(!document.querySelector("#annbar").hasChildNodes()) {
