@@ -1,3 +1,3 @@
 # Francium
 
-This is a private project, it's public because i want to upload it to github pages.
+I'm teaching my mother to speak French and I'm using this website to upload her grades.
